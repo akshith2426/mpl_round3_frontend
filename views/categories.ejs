@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+<form action="/cat" method="POST">
+    <button type="button" class="btn btn-warning btn-lg" id="reset_values">RESET CURR VALS</button>
+</form>
+<p>ROUND 3</p>
+<div id="round3">
+    <span>
+        <% ct.forEach(function(c){%>
+        <a href="/cat/<%=c.name%>" class="<%=c.name%>"><%=c.name%></a>
+        <%})%>
+    </span>
+<img src="/images/MPL_logo.png" alt="MPL_logo" id="mpl_logo">
+</div>
+
+
+
+<%- include("partials/footer") %>

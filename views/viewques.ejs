@@ -1,0 +1,52 @@
+<%- include("partials/qheader.ejs")  %>
+ 
+<nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">SIAM-VIT</a>
+      <ul class="right hide-on-med-and-down">
+        <li ><a href="/questions/new">Add Questions</a></li>
+        <li class="active"> <a href="/questions/view">Questions</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container" data-cats="<%=categories%>">
+    <h1>Questions</h1>
+        <%for(var i=0;i<=categories.length-1;i++){%>
+            <div><h5>Category Name: <%=categories[i].name%></h5></div>
+                <%for(var j=-1;j<=categories[i].questions.length-1;j++){%>
+                    <div class="row">
+                    <div class="col s8">
+                        <%if(j===-1){%>
+                                <h5>Question</h5>
+                       <% }else{%>
+                            <%=j+1%>) <%=categories[i].questions[j].desc%>
+                       <% }%>
+                    </div>
+                    <div class="col s2">
+                        <%if(j===-1){%>
+                            <h5>Points</h5>
+                   <% }else{%>
+                        <%=categories[i].questions[j].points;%>
+                   <% }%>
+                    </div>
+                    <div class="col s2">
+                        <%if(j!=-1){%>
+                            <!-- <button class="modify" data-cat="<%=i%>" data-question="<%=j%>" data-qid="<%=categories[i].questions[j]._id%>" class=>MODIFY</button> -->
+                            <a class="btn" href="/questions/<%=categories[i].questions[j]._id%>/edit">modify</a>
+                        <%}%>
+                    </div>
+                </div>
+                <%}%>
+                <hr>
+        <%}%>
+       
+</div>
+<!-- <form method="post" style="display:none;position:absolute;left:40%;top:40%;z-index:1;background-color: grey;padding:70px;">
+    <h4>MODIFY</h4>
+    <button class="btn">Submit</button>
+</form> -->
+
+
+<%- include("partials/qfooter.ejs")  %>

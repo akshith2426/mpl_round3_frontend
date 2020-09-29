@@ -1,0 +1,80 @@
+body {
+	margin: 5%;
+}
+p {
+	position: absolute;
+	z-index: -1;
+	font-size: 130px;
+	font-weight: 900;
+	opacity: 0.5;
+	color: #deae00;
+	margin-top: -6%;
+	transform: scale(0.75, 1.5);
+}
+#round3 {
+	margin-top: 10%;
+}
+/*styling done based on categories names*/
+.algebra {
+	padding: 5% 3%;
+	border-radius: 8%;
+	position: absolute;
+	margin-top: 17%;
+}
+
+.cryptic {
+	padding: 5% 3%;
+	border-radius: 8%;
+	margin-left: 17%;
+	position: absolute;
+	margin-top: 5%;
+}
+.vedic {
+	padding: 4.5% 4%;
+	border-radius: 8%;
+	margin-left: 37%;
+	position: absolute;
+	margin-top: -7%;
+}
+.calculus {
+	padding: 5% 3%;
+	border-radius: 8%;
+	margin-left: 57%;
+	position: absolute;
+	margin-top: 5%;
+}
+.logical {
+	padding: 5% 3%;
+	border-radius: 8%;
+	margin-left: 77%;
+	position: absolute;
+	margin-top: 17%;
+}
+/* //////////////////////////////// */
+a {
+	transition: transform 3s ease-in-out;
+}
+a:hover {
+	transform: rotateY(360deg);
+}
+a:hover,
+a:visited,
+a:link,
+a:active {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	background-color: #075475;
+	font-size: larger;
+	font-weight: 700;
+}
+#mpl_logo {
+	height: 250px;
+	width: 20%;
+	margin-left: 40%;
+	margin-top: 14%;
+}
+#reset_values {
+	float: right;
+	margin-top: -8%;
+}

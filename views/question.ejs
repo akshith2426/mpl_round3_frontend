@@ -1,0 +1,10 @@
+<%- include("partials/header") %>
+<h1> <%=c[0].name %></h1>
+    
+    <p><%=c[0].questions[c[0].curr].desc%></p><br>
+    
+    <form action="/cat/<%=c[0].name%>" method="POST">
+        
+        <input type="submit">
+    </form>
+<%- include("partials/footer") %>
